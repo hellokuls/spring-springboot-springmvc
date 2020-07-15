@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="baa4f801-ec8f-4aa0-95e6-da54daae6006" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+        <option name="vmOptionsForImporter" value="-Xmx768m" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1ZpMXe73cjOdtg8kJ7Grhjaonek" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="settings.editor.selected.configurable" value="copyright.filetypes.Properties" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.kuls.springboot02config" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.Springboot02ConfigApplication">
+    <configuration name="Springboot02ConfigApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="springboot-02-config" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.kuls.springboot02config.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.kuls.springboot02config" />
+      <option name="MAIN_CLASS_NAME" value="com.kuls.springboot02config.Springboot02ConfigApplicationTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Springboot02ConfigApplicationTests.contextLoads" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="springboot-02-config" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.kuls.springboot02config.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.kuls.springboot02config" />
+      <option name="MAIN_CLASS_NAME" value="com.kuls.springboot02config.Springboot02ConfigApplicationTests" />
+      <option name="METHOD_NAME" value="contextLoads" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Springboot02ConfigApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="springboot-02-config" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.kuls.springboot02config.Springboot02ConfigApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.Springboot02ConfigApplicationTests.contextLoads" />
+        <item itemvalue="JUnit.Springboot02ConfigApplicationTests" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpringBootOptions">
+    <option name="showAdditionalConfigNotification" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="baa4f801-ec8f-4aa0-95e6-da54daae6006" name="Default Changelist" comment="" />
+      <created>1585531622274</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1585531622274</updated>
+      <workItem from="1585531630491" duration="4319000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/../.." />
+    </ignored-roots>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="276" y="382" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1585572158673">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="276" y="382" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1440.900@0.0.1440.900" timestamp="1585572158673" />
+    <state x="486" y="337" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages" timestamp="1585572160393">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="486" y="337" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.0.1440.900@0.0.1440.900" timestamp="1585572160393" />
+    <state width="1398" height="493" key="GridCell.Tab.0.bottom" timestamp="1585615555181">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="493" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1585615555181" />
+    <state width="1398" height="493" key="GridCell.Tab.0.bottom/47.23.1393.877@47.23.1393.877" timestamp="1585613500231" />
+    <state width="1398" height="493" key="GridCell.Tab.0.center" timestamp="1585615555179">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="493" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1585615555179" />
+    <state width="1398" height="493" key="GridCell.Tab.0.center/47.23.1393.877@47.23.1393.877" timestamp="1585613500230" />
+    <state width="1398" height="493" key="GridCell.Tab.0.left" timestamp="1585615555172">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="493" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1585615555172" />
+    <state width="1398" height="493" key="GridCell.Tab.0.left/47.23.1393.877@47.23.1393.877" timestamp="1585613500229" />
+    <state width="1398" height="493" key="GridCell.Tab.0.right" timestamp="1585615555181">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="493" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1585615555181" />
+    <state width="1398" height="493" key="GridCell.Tab.0.right/47.23.1393.877@47.23.1393.877" timestamp="1585613500230" />
+    <state width="1398" height="493" key="GridCell.Tab.1.bottom" timestamp="1585615555184">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="493" key="GridCell.Tab.1.bottom/0.0.1440.900@0.0.1440.900" timestamp="1585615555184" />
+    <state width="1398" height="493" key="GridCell.Tab.1.center" timestamp="1585615555182">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="493" key="GridCell.Tab.1.center/0.0.1440.900@0.0.1440.900" timestamp="1585615555182" />
+    <state width="1398" height="493" key="GridCell.Tab.1.left" timestamp="1585615555182">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="493" key="GridCell.Tab.1.left/0.0.1440.900@0.0.1440.900" timestamp="1585615555182" />
+    <state width="1398" height="493" key="GridCell.Tab.1.right" timestamp="1585615555183">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="493" key="GridCell.Tab.1.right/0.0.1440.900@0.0.1440.900" timestamp="1585615555183" />
+    <state x="215" y="87" key="SettingsEditor" timestamp="1585612957839">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="215" y="87" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1585612957839" />
+    <state x="194" y="142" key="new project wizard" timestamp="1585615553576">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="194" y="142" key="new project wizard/0.0.1440.900@0.0.1440.900" timestamp="1585615553576" />
+  </component>
+</project>

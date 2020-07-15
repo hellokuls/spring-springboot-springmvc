@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!-- 单例bean，scope设置为singleton-->
+    <bean id="singletonBean" class="com.kulsdemo.springdemo2.BeanScopeModel" scope="singleton" lazy-init="true">
+        <constructor-arg index="0" value="single"/>
+    </bean>
+
+    <!-- 多例bean，scope设置为prototype-->
+    <bean id="prototypeBean" class="com.kulsdemo.springdemo2.BeanScopeModel" scope="prototype">
+        <constructor-arg index="0" value="prototype"/>
+    </bean>
+
+
+    <!-- 自定义scope的bean -->
+    <bean id="threadBean" class="com.kulsdemo.springdemo2.BeanScopeModel" scope="thread">
+        <constructor-arg index="0" value="thread"/>
+    </bean>
+</beans>

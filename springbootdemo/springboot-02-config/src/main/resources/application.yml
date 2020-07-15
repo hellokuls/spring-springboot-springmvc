@@ -1,0 +1,30 @@
+person:
+  name: "kuls"
+  age: 3
+  happy: false
+  birthday: 2000/10/11
+  map: {k1: v1,k2: v2}
+  list:
+    - code
+    - music
+  dog:
+    name: "旺财"
+    age: 3
+
+# 切换环境
+server:
+  port: 8080
+spring:
+  profiles:
+    active: dev
+---
+server:
+  port: 8081
+spring:
+  profiles: dev
+
+---
+server:
+  port: 8082
+spring:
+  profiles: test

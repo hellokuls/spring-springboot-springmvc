@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+<!--    <bean id="service_A" class="com.kulsdemo.springdemo7.ServiceA"/>-->
+
+<!--    <bean id="service_B" class="com.kulsdemo.springdemo7.ServiceB">-->
+<!--        <property name="name" value="kuls"/>-->
+<!--        <property name="serviceA" ref="service_A"/>-->
+<!--    </bean>-->
+
+<!--    <bean id="service_C" class="com.kulsdemo.springdemo7.ServiceB">-->
+<!--        <property name="name" value="kuls"/>-->
+<!--        <property name="serviceA" ref="service_A"/>-->
+<!--    </bean>-->
+
+
+
+
+<!--    多了一个baseService的bean，这个bean没有指定class对象，但是多了一个abstract="true"的属性，表示这个bean是抽象的，-->
+<!--    abstract为true的bean在spring容器中不会被创建，-->
+<!--    只是会将其当做bean定义的模板，而serviceB和serviceC的定义中多了一个属性parent，用来指定当前bean的父bean名称，-->
+<!--    此处是baseService，此时serviceB和serviceC会继承baseService中定义的配置信息。-->
+    <bean id="service_A" class="com.kulsdemo.springdemo7.ServiceA"/>
+
+    <bean id="baseService" abstract="true">
+        <property name="name" value="kuls"/>
+        <property name="serviceA" ref="service_A"/>
+    </bean>
+
+    <bean id="service_B" class="com.kulsdemo.springdemo7.ServiceB" parent="baseService"/>
+
+<!--    <bean id="service_C" class="com.kulsdemo.springdemo7.ServiceC" parent="baseService"/>-->
+<!--    -->
+    <bean id="service_C" class="com.kulsdemo.springdemo7.ServiceC" parent="baseService">
+        <property name="name" value="kuls is me"/>
+        <property name="serviceA" ref="service_A"/>
+    </bean>
+
+
+
+</beans>

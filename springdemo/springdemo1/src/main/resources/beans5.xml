@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--注册顺序为 bean3 - bean2 - bean1 -->
+<!--    <bean id="bean3" class="com.kulsdemo.springdemo5.NormalBean$Bean3"/>-->
+<!--    <bean id="bean2" class="com.kulsdemo.springdemo5.NormalBean$Bean2"/>-->
+<!--    <bean id="bean1" class="com.kulsdemo.springdemo5.NormalBean$Bean1"/>-->
+
+
+
+    <!--依赖关系是：bean3->bean2->bean1-->
+<!--    <bean id="bean3" class="com.kulsdemo.springdemo5.StrongDependenceBean$Bean3">-->
+<!--        <constructor-arg index="0" ref="bean2"/>-->
+<!--    </bean>-->
+<!--    <bean id="bean2" class="com.kulsdemo.springdemo5.StrongDependenceBean$Bean2">-->
+<!--        <constructor-arg index="0" ref="bean1"/>-->
+<!--    </bean>-->
+<!--    <bean id="bean1" class="com.kulsdemo.springdemo5.StrongDependenceBean$Bean1">-->
+<!--    </bean>-->
+
+
+    <!--使用depend-on来依赖-->
+<!--    <bean id="bean3" class="com.kulsdemo.springdemo5.NormalBean$Bean3" depends-on="bean2,bean1"/>-->
+<!--    <bean id="bean2" class="com.kulsdemo.springdemo5.NormalBean$Bean2"/>-->
+<!--    <bean id="bean1" class="com.kulsdemo.springdemo5.NormalBean$Bean1"/>-->
+
+<!--    <bean id="bean3" class="com.kulsdemo.springdemo5.SetterBean$Bean3"/>-->
+<!--    <bean id="bean2" class="com.kulsdemo.springdemo5.SetterBean$Bean2"/>-->
+<!--    <bean id="bean1" class="com.kulsdemo.springdemo5.SetterBean$Bean1"/>-->
+
+
+    <bean id="setterBean" class="com.kulsdemo.springdemo5.SetterBean" >
+        <property name="bean3" ref="bean3-3"/>
+        <property name="bean2" ref="bean2-2"/>
+        <property name="bean1" ref="bean1-1"/>
+
+    </bean>
+    <bean id="bean3-3" class="com.kulsdemo.springdemo5.SetterBean$Bean3">
+        <constructor-arg index="0" ref="bean2-2"/>
+    </bean>
+
+    <bean id="bean2-2" class="com.kulsdemo.springdemo5.SetterBean$Bean2">
+        <constructor-arg index="0" ref="bean1-1"/>
+    </bean>
+    <bean id="bean1-1" class="com.kulsdemo.springdemo5.SetterBean$Bean1"/>
+</beans>

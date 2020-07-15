@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <bean id="Constructor1" class="com.kulsdemo.springdemo1.UserModel"/>
+
+    <bean id="Constructor2" class="com.kulsdemo.springdemo1.UserModel">
+        <constructor-arg index="0" value="我是有参数构造器"/>
+        <constructor-arg index="1" value="20"/>
+    </bean>
+
+
+    <!-- 通过工厂静态无参方法创建bean对象 -->
+    <bean id="createBeanByStaticFactoryMethod1" class="com.kulsdemo.springdemo1.UserStaticFactory"
+          factory-method="builderUser1"/>
+
+    <!-- 通过工厂静态有参方法创建bean对象 -->
+    <bean id="createBeanByStaticFactoryMethod2" class="com.kulsdemo.springdemo1.UserStaticFactory"
+          factory-method="builderUser2">
+        <constructor-arg index="0" value="通过工厂静态有参方法创建UerModel实例对象"/>
+        <constructor-arg index="1" value="20"/>
+    </bean>
+
+
+    <!-- 首先定义一个工厂实例 -->
+    <bean id="userFactory" class="com.kulsdemo.springdemo1.UserFactory"/>
+    <!-- 通过userFactory实例的无参user方法创建UserModel对象 -->
+    <bean id="createBeanByBeanMethod1" factory-bean="userFactory" factory-method="buildUser1"/>
+
+    <!-- 通过userFactory实例的有参user方法创建UserModel对象 -->
+    <bean id="createBeanByBeanMethod2" factory-bean="userFactory" factory-method="buildUser2">
+        <constructor-arg index="0" value="通过bean实例有参方法创建UserModel实例对象"/>
+        <constructor-arg index="1" value="20"/>
+    </bean>
+
+
+    <!-- 通过FactoryBean 创建UserModel对象 -->
+    <bean id="createByFactoryBean" class="com.kulsdemo.springdemo1.UserFactoryBean"/>
+
+</beans>

@@ -1,0 +1,47 @@
+{
+  "groups": [
+    {
+      "name": "person",
+      "type": "com.kuls.springboot02config.pojo.Person",
+      "sourceType": "com.kuls.springboot02config.pojo.Person"
+    }
+  ],
+  "properties": [
+    {
+      "name": "person.age",
+      "type": "java.lang.Integer",
+      "sourceType": "com.kuls.springboot02config.pojo.Person"
+    },
+    {
+      "name": "person.birthday",
+      "type": "java.util.Date",
+      "sourceType": "com.kuls.springboot02config.pojo.Person"
+    },
+    {
+      "name": "person.dog",
+      "type": "com.kuls.springboot02config.pojo.Dog",
+      "sourceType": "com.kuls.springboot02config.pojo.Person"
+    },
+    {
+      "name": "person.happy",
+      "type": "java.lang.Boolean",
+      "sourceType": "com.kuls.springboot02config.pojo.Person"
+    },
+    {
+      "name": "person.list",
+      "type": "java.util.List<java.lang.Object>",
+      "sourceType": "com.kuls.springboot02config.pojo.Person"
+    },
+    {
+      "name": "person.map",
+      "type": "java.util.Map<java.lang.String,java.lang.Object>",
+      "sourceType": "com.kuls.springboot02config.pojo.Person"
+    },
+    {
+      "name": "person.name",
+      "type": "java.lang.String",
+      "sourceType": "com.kuls.springboot02config.pojo.Person"
+    }
+  ],
+  "hints": []
+}

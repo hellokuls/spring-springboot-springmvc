@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+<!--    <bean id="serviceA" class="com.kulsdemo.springdemo6.NormalBean$ServiceA"/>-->
+
+<!--    <bean id="serviceB" class="com.kulsdemo.springdemo6.NormalBean$ServiceB"/>-->
+
+    <bean id="serviceC" class="com.kulsdemo.springdemo6.PrimaryBean$ServiceA" />
+    <bean id="serviceD" class="com.kulsdemo.springdemo6.PrimaryBean$ServiceB" primary="true"/>
+    <bean id="serviceBean" class="com.kulsdemo.springdemo6.PrimaryBean"/>
+
+    <!--  延迟初始化bean-->
+    <bean id="lazyInitBean" class="com.kulsdemo.springdemo6.LazyInitBean" lazy-init="true"/>
+    <bean id="actualTimeDependencyLazyBean" class="com.kulsdemo.springdemo6.ActualTimeDependencyLazyBean">
+        <property name="lazyInitBean" ref="lazyInitBean"/>
+    </bean>
+
+</beans>

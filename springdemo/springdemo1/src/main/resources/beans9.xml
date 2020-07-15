@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="serviceA" class="com.kulsdemo.springdemo9.ServiceA" scope="prototype"/>
+
+    <bean id="serviceB" class="com.kulsdemo.springdemo9.ServiceB"/>
+
+
+
+    <bean id="serviceA1" class="com.kulsdemo.springdemo9.ServiceA1" scope="prototype"/>
+
+    <bean id="serviceB1" class="com.kulsdemo.springdemo9.ServiceB1">
+<!--当我们调用serviceB中的getServiceA方法的时候，这个方法会拦截，然后会按照lookup-method元素中bean属性的值作为bean的名称去容器中查找对应bean，然后作为getServiceA的返回值返回，
+即调用getServiceA方法的时候，会从spring容器中查找id为serviceA的bean然后返回。-->
+        <lookup-method name="getServiceA1" bean="serviceA1"/>
+    </bean>
+
+
+
+    <!-- 定义替换者bean -->
+    <bean id="serviceBMethodReplacer" class="com.kulsdemo.springdemo9.ServiceBMethodReplacer" />
+
+    <bean id="serviceA2" class="com.kulsdemo.springdemo9.ServiceA2" scope="prototype"/>
+
+    <bean id="serviceB2" class="com.kulsdemo.springdemo9.ServiceB2">
+        <replaced-method name="getServiceA2" replacer="serviceBMethodReplacer"/>
+    </bean>
+</beans>

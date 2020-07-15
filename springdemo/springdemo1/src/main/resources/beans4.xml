@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
+default-autowire="byName">
+
+    <bean id="service1" class="com.kulsdemo.springdemo4.DiAutowireByName$Service1">
+        <property name="desc" value="service1"/>
+    </bean>
+    <bean id="service2" class="com.kulsdemo.springdemo4.DiAutowireByName$Service2">
+        <property name="desc" value="service2"/>
+    </bean>
+    <bean id="service2-1" class="com.kulsdemo.springdemo4.DiAutowireByName$Service2">
+        <property name="desc" value="service2-1"/>
+    </bean>
+
+    <!-- autowire：byName 配置按照name进行自动注入 -->
+    <bean id="diAutowireByName1" class="com.kulsdemo.springdemo4.DiAutowireByName" autowire="byName"/>
+
+    <!-- 当配置了自动注入，还可以使用手动的方式自动注入进行覆盖，手动的优先级更高一些 -->
+    <bean id="diAutowireByName2" class="com.kulsdemo.springdemo4.DiAutowireByName" autowire="byName">
+        <property name="service2" ref="service2-1"/>
+    </bean>
+
+
+
+
+    <bean class="com.kulsdemo.springdemo4.DiAutowireByType$Service1">
+        <property name="desc" value="service1111"/>
+    </bean>
+    <bean class="com.kulsdemo.springdemo4.DiAutowireByType$Service2">
+        <property name="desc" value="service2"/>
+    </bean>
+
+    <!-- autowire：byType 配置按照set参数类型进行自动注入 -->
+    <bean id="diAutowireByType1" class="com.kulsdemo.springdemo4.DiAutowireByType" autowire="byType"/>
+
+
+    <!-- autowire：构造器进行自动注入 -->
+    <bean class="com.kulsdemo.springdemo4.DiAutowireByConstructor$Service1">
+        <property name="desc" value="service1"/>
+    </bean>
+    <bean class="com.kulsdemo.springdemo4.DiAutowireByConstructor$Service2">
+        <property name="desc" value="service2"/>
+    </bean>
+
+    <bean id="diAutowireByConstructor" class="com.kulsdemo.springdemo4.DiAutowireByConstructor"
+          autowire="constructor"/>
+
+
+
+    <!-- autowire：default，会采用beans中的default-autowire指定的配置 -->
+    <bean id="diAutowireByDefault1" class="com.kulsdemo.springdemo4.DiAutowireByName" autowire="default"/>
+
+    <!-- autowire：default，会采用beans中的default-autowire指定的配置，还可以使用手动的方式自动注入进行覆盖，手动的优先级更高一些 -->
+        <bean id="diAutowireByDefault2" class="com.kulsdemo.springdemo4.DiAutowireByName" autowire="default">
+            <property name="service2" ref="service2-1"/>
+        </bean>
+
+</beans>

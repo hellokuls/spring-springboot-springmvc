@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <!-- 通过构造器参数的索引注入 -->
+    <bean id="diByConstructorParamIndex" class="com.kulsdemo.springdemo3.UserModel">
+        <constructor-arg index="0" value="kuls"/>
+        <constructor-arg index="1" value="我是通过构造器参数 位置 注入的"/>
+    </bean>
+
+    <!-- 通过构造器参数的类型注入 -->
+    <bean id="diByConstructorParamType" class="com.kulsdemo.springdemo3.UserModel">
+        <constructor-arg type="int" value="20"/>
+        <constructor-arg type="java.lang.String" value="kuls"/>
+        <constructor-arg type="java.lang.String" value="我是通过构造器参数 类型 注入的"/>
+    </bean>
+
+
+
+
+    <!-- 通过构造器参数的名称注入 -->
+    <bean id="diByConstructorParamName" class="com.kulsdemo.springdemo3.CarModel">
+        <constructor-arg name="desc" value="我是通过构造器参数类型注入的"/>
+        <constructor-arg name="name" value="保时捷Macans"/>
+    </bean>
+    <!-- 通过setter注入 -->
+    <bean id="diBySetter" class="com.kulsdemo.springdemo3.MenuModel">
+        <property name="label" value="spring"/>
+        <property name="theSort" value="1"/>
+    </bean>
+
+
+
+
+    <bean id="user" class="com.kulsdemo.springdemo3.UserModel"/>
+    <!-- 通过构造器方式注入容器中的bean -->
+    <bean id="diBeanByConstructor" class="com.kulsdemo.springdemo3.PersonModel">
+        <!-- 通过ref引用容器中定义的其他bean，user对应上面定义的id="user"的bean -->
+        <constructor-arg index="0" ref="user"/>
+        <constructor-arg index="1">
+            <bean class="com.kulsdemo.springdemo3.CarModel">
+                <constructor-arg index="0" value="宾利"/>
+                <constructor-arg index="1" value=""/>
+            </bean>
+        </constructor-arg>
+    </bean>
+
+    <!-- 通过setter方式注入容器中的bean -->
+    <bean id="diBeanBySetter" class="com.kulsdemo.springdemo3.PersonModel">
+        <!-- 通过ref引用容器中定义的其他bean，user对应上面定义的id="user"的bean -->
+        <property name="userModel" ref="user"/>
+        <property name="carModel">
+            <bean class="com.kulsdemo.springdemo3.CarModel">
+                <constructor-arg index="0" value="保时捷"/>
+                <constructor-arg index="1" value=""/>
+            </bean>
+        </property>
+    </bean>
+
+
+
+
+
+    <bean id="user1" class="com.kulsdemo.springdemo3.UserModel"/>
+    <bean id="user2" class="com.kulsdemo.springdemo3.UserModel"/>
+
+    <bean id="diOtherType" class="com.kulsdemo.springdemo3.DiOtherTypeModel">
+        <!-- 注入java.util.List对象 -->
+        <property name="list1">
+            <list>
+                <value>Spring</value>
+                <value>SpringBoot</value>
+            </list>
+        </property>
+
+        <!-- 注入java.util.Set对象 -->
+        <property name="set1">
+            <set>
+                <ref bean="user1"/>
+                <ref bean="user2"/>
+                <ref bean="user1"/>
+            </set>
+        </property>
+
+        <!-- 注入java.util.Map对象 -->
+        <property name="map1">
+            <map>
+                <entry key="kuls" value="30"/>
+                <entry key="kuls1" value="28"/>
+            </map>
+        </property>
+
+        <!-- 注入数组对象 -->
+        <property name="array1">
+            <array>
+                <value>10</value>
+                <value>9</value>
+                <value>8</value>
+            </array>
+        </property>
+
+        <!-- 注入java.util.Properties对象 -->
+        <property name="properties1">
+            <props>
+                <prop key="key1">java高并发系列</prop>
+                <prop key="key2">mybatis系列</prop>
+                <prop key="key3">mysql系列</prop>
+            </props>
+        </property>
+
+    </bean>
+</beans>
